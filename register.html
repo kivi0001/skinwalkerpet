@@ -10,34 +10,177 @@
     <link rel="stylesheet" href="css/infographic.css" />
     <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
-    <title>Emergency Site</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <title>Skinwalker pets</title>
   </head>
   <body id="register">
     <header>
       <nav>
         <div id="logotype-wrapper">
-          <a href="index.html"> LOGOTYPE </a>
+          <a href="index.html">SKINWALKER PETS ©</a>
         </div>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
-          <li><a class="menuItem" href="register.html">Indberet</a></li>
+          <li><a class="menuItem" href="instruction.html">Signaler</a></li>
+          <li><a class="menuItem" href="register.html">Indhent tilbud</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1 class="instruks">INDHENT TILBUD</h1>
+
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>BESTIL CLAIRVOYANT MED <br />SPECIALE I KÆLEDYR</h2>
+          <p>
+            Her kan du bestille et tilbud fra en åndelig ekspert, <br />som kan
+            hjælpe dig med at få kontakt til din kære, der har taget bolig i dit
+            kæledyr.
+          </p>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <fieldset id="contact">
+            <div>
+              <label for="fornavn">FORNAVN</label>
+              <input type="text" name="fornavn" id="fornavn" required />
+            </div>
+            <div>
+              <label for="efternavn">EFTERNAVN</label>
+              <input type="text" name="efternavn" id="efternavn" required />
+            </div>
+            <div>
+              <label for="telefonnummer">TELEFONNUMMER</label>
+              <input
+                type="phonenumber"
+                name="telefonnummer"
+                id="tlf"
+                required
+                minlength="8"
+                maxlength="11"
+              />
+            </div>
+            <div>
+              <label for="email">E-MAIL</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+          </fieldset>
+          <fieldset id="dateDescribeType">
+            <section id="personPetDate">
+              <div>
+                <label for="persondate">AFDØDES DØSDATO</label>
+                <input type="date" name="persondate" id="persondate" required />
+              </div>
+              <div class="petdate">
+                <label for="petdate">KÆLEDYRETS FØDSELSDAG</label>
+                <input type="date" name="petdate" id="petdate" required />
+              </div>
+            </section>
+            <div id="describe">
+              <label for="beskriv">BESKRIV FORLØBET HER</label>
+              <textarea
+                name="beskriv"
+                id="beskriv"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div id="type">
+              <label for="pettype">TYPE AF KÆLEDYR</label>
+              <select name="pettype" id="pettype" required>
+                <option value="hund">Hund</option>
+                <option value="kat">Kat</option>
+                <option value="fugl">Fugl</option>
+                <option value="gnaver">Gnaver</option>
+                <option value="reptil">Reptil</option>
+                <option value="akvarie">Akvarierelateret</option>
+                <option value="insekt">Insekt</option>
+                <option value="husdyr">Husdyr (ko, gris, hest, el.l.)</option>
+                <option value="andet">Andet</option>
+              </select>
+            </div>
+          </fieldset>
+          <fieldset id="checkboxes">
+            <div>
+              <input type="checkbox" name="check" id="risiko" required />
+              <label for="risiko">JA, JEG ACCEPTERER</label>
+              <p class="risiko">
+                RISIKOEN FOR AT MIT KÆLEDYR BLIVER BESKADIGET, GÅR BORT, ELLER
+                BESAT AF LUCIFER. JEG PÅDRAGER MIG HERMED AL ANSVAR FOR
+                EVENTUELLE UDFALD AF FORLØBET MED EN ÅNDELIG EKSPERT.
+              </p>
+            </div>
+            <div>
+              <input type="checkbox" name="check" id="ouija" />
+              <label for="ouija"
+                >JA TAK, JEG VIL GERNE TILKØBE ET OUIJABOARD TIL KÆLEDYR</label
+              >
+              <p class="ouija">
+                (MEDBRINGES AF ÅNDELIG EKSPERT PÅ DEN AFTALTE DATO)
+              </p>
+            </div>
+          </fieldset>
+          <button id="submit_btn" type="submit">SEND MIG ET TILBUD</button>
+        </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
+        <article id="sum">
+          <div>
+            <h3>FORNAVN</h3>
+            <p id="sum-navn"></p>
+          </div>
+          <div id="sum-efternavn">
+            <h3>EFTERNAVN</h3>
+            <p></p>
+          </div>
+          <div id="sum-telefon">
+            <h3>TELEFONNUMMER</h3>
+            <p></p>
+          </div>
+          <div id="sum-email">
+            <h3>E-MAIL</h3>
+            <p></p>
+          </div>
+          <div id="sum-persondate">
+            <h3>AFDØDES DØSDATO</h3>
+            <p></p>
+          </div>
+          <div id="sum-petdate">
+            <h3>KÆLEDYRETS FØDSELSDAG</h3>
+            <p></p>
+          </div>
+          <div id="sum-beskriv">
+            <h3>BESKRIVELSE AF FORLØBET</h3>
+            <p></p>
+          </div>
+          <div id="sum-type">
+            <h3>TYPE AF KÆLDEDYR</h3>
+            <p></p>
+          </div>
+          <div>
+            <h3>JA, JEG ACCEPTERER RISICI</h3>
+            <p id="sum-accept"></p>
+          </div>
+          <div>
+            <h3>JA, JEG VIL TILKØBE OUIJA</h3>
+            <p id="sum-accept"></p>
+          </div>
+          <form>
+            <button id="reset-btn" type="reset">GODKEND</button>
+          </form>
         </article>
       </section>
     </main>
@@ -67,5 +210,6 @@
         </ul>
       </nav>
     </footer>
+    <script src="js/form.js"></script>
   </body>
 </html>
