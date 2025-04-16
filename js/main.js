@@ -78,3 +78,32 @@ function normalizeCurlerColor(){
     document.querySelector(".curler9").style.fill = "#FF7CAE";
     document.querySelector(".curler10").style.fill = "#FF7CAE";
 }
+
+// SVG site, hover artikler //
+
+document.querySelector("#curlers").addEventListener("click", curlerInfo);
+function curlerInfo (){
+    console.log ("curlerInfo");
+    document.querySelector(".info-text > h2").textContent = "CURLERE";
+    document.querySelector(".info-text > article > p").textContent = "Har din hund på uforklarlig vis curlere i håret, når du står op om morgenen? Så er der en sandsynlighed for, at din hund i virkeligheden er din afdøde mormor.";
+    document.querySelector("#andreTegn").innerHTML = "<h3>ANDRE TEGN</h3><p><ul><li>Bruger briller el. høreapparater</li><li>Din hund holder øje med naboerne gennem persiennerne</li><li>Vil kun høre dansk top</li></ul></p>";
+    document.querySelector("#andreSituationer").innerHTML = "<h3>ANDRE SITUATIONER</h3><p>Mange oplever lignende oplevelser med andre typer af kæledyr el. husdyr, og med besættelser af andre afdøde end bedstemødre. Gå til siden <strong>indhent tilbud</strong>, for at få et tilbud fra en clairvoyant med speciale i dyr, som kan hjælpe dig med at afdække hvorvidt dit kæledyr er besat af en afdød.</p>";
+}
+
+document.querySelector("#table").addEventListener("click", tableInfo);
+function tableInfo (){
+    console.log ("tableInfo");
+    document.querySelector(".info-text > h2").textContent = "KAFFE";
+    document.querySelector(".info-text > article > p").textContent = "Vil din hund allerhelst bare drikke 8 kopper kaffe, og spise kalkpiller og omega 3? Så skal du måske overveje muligheden for, at din hund i virkeligheden er din afdøde mormor.";
+    document.querySelector("#andreTegn").innerHTML = "<h3>ANDRE TEGN</h3><p><ul><li>Læser BilledBladet</li><li>Spiller Yatzy</li><li>Forsøger ubønhørligt at få dig med på en tur i campingvogn</li></ul></p>";
+    document.querySelector("#andreSituationer").innerHTML = "<h3>ANDRE SITUATIONER</h3><p>Mange oplever lignende oplevelser med andre typer af kæledyr el. husdyr, og med besættelser af andre afdøde end bedstemødre. Gå til siden <strong>indhent tilbud</strong>, for at få et tilbud fra en clairvoyant med speciale i dyr, som kan hjælpe dig med at afdække hvorvidt dit kæledyr er besat af en afdød.</p>";
+}
+
+document.querySelector("#bowl").addEventListener("click", bowlInfo);
+function bowlInfo(){
+    console.log ("bowlInfo");
+    document.querySelector(".info-text > h2").textContent = "MAD-PUSHER";
+    document.querySelector(".info-text > article > p").textContent = "Bliver din hund ved med at skubbe madskålen tilbage til dig med et bebrejdende blik, så du føler dig skamfuldt presset til at spise mere mad, uanset hvor mæt du er? Måske er din hund faktisk din afdøde mormor.";
+    document.querySelector("#andreTegn").innerHTML = "<h3>ANDRE TEGN</h3><p><ul><li>Fnyser når du afviser maden</li><li>Sniger en pengeseddel i hånden på dig, når I leger giv pote</li><li>Ser bebrejdende og dømmende på din mor, hver gang hun kommer på besøg</li></ul></p>";
+    document.querySelector("#andreSituationer").innerHTML = "<h3>ANDRE SITUATIONER</h3><p>Mange oplever lignende oplevelser med andre typer af kæledyr el. husdyr, og med besættelser af andre afdøde end bedstemødre. Gå til siden <strong>indhent tilbud</strong>, for at få et tilbud fra en clairvoyant med speciale i dyr, som kan hjælpe dig med at afdække hvorvidt dit kæledyr er besat af en afdød.</p>";
+}

@@ -54,6 +54,7 @@ footer {
  height: 90px;
  margin: auto;
 }
+
 main section {
   padding: 20px;
   /* margin: 10px; */
@@ -144,6 +145,7 @@ a {
   width: 100%;
   display: flex;
   align-items: center;
+  padding: 1rem;
 }
 header nav li a {
   margin: 1.5rem;
@@ -169,10 +171,11 @@ footer a {
 }
 .yellow,
 .green {
-  padding: 1.5rem 1rem 0.5rem 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
 }
 .yellow {
   background-color: var(--info-bg-color-yellow);
+  padding: 2rem;
 }
 .green {
   background-color: var(--info-bg-color-green);
