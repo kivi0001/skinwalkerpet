@@ -1,5 +1,5 @@
 #webform {
-  background-color: #DBE2F5;
+  background-color: var(--info-background-color-inverted);
   margin: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -59,17 +59,18 @@ textarea{
 }
 #submit_btn{
   grid-row: 4;
-  background-color: #FD69AE;
+  background-color: var(--followup-text-bg-color);
   border-radius: 2rem;
   border: none;
-  color: #FFFAE2;
+  color: var(--followup-text-color);
   grid-column: span 2;
   margin-right: 20%;
   margin-left: 20%;
   padding: 1em;
+  font: var(--link-font);
 }
 #submit_btn:hover{
-  background-color: #FF067A;
+  background-color: var( --hover-bg-color);
 }
 
 #form-info p{
@@ -90,7 +91,7 @@ textarea{
   text-align: center;
   background-color: var(--headline-bg-color-inverted);
   color: var(--headline-color-inverted);
-  padding-top: 5px;
+  padding: 1.8rem;
 }
 #form-summary h3 {
   font-size: 0.8rem;
@@ -114,9 +115,7 @@ textarea{
     height: 200px;
     resize: vertical;
 }
-input{
-  width: 100%;
-}
+
 select{
   width: 100%;
 }
@@ -129,30 +128,39 @@ select{
 #petdate,
 #pettype,
 #beskriv{
-    background-color: #FFFfff;
+    background-color: var(--form-submit-color);
     border-color: black;
     border: solid black 0.5px;
     display: block;
 }
 
+#fornavn,
+#efternavn,
+#tlf,
+#email{
+  width: 100%;
+}
+
 #reset_btn{
-  background-color: #FD69AE;
+  background-color: var(--followup-text-bg-color);
   border-radius: 2rem;
   border: none;
-  color: #FFFAE2;
-  margin-top: 2rem;
+  color: var(--followup-text-color);
+  margin-top: 4rem;
   margin-right: 20%;
-  margin-left: 20%;
+  margin-left: 30%;
   padding: 1em;
+  font: var(--link-font)
 }
 #reset_btn:hover{
-  background-color: #FF067A;
+  background-color: var( --hover-bg-color);
 }
 
 #sum{
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 #sum div{
   margin-top: 1rem;
 }
@@ -172,4 +180,5 @@ select{
 }
 #sum form{
   grid-row: 7;
+  grid-column: span 2;
 }

@@ -1,6 +1,6 @@
 :root {
   /* Colours */
-  --primary-bg-color: #FFDEF7; /* used */
+  --primary-bg-color: #FFCC9E; /* used */
   --primary-font-color: #474d52; /* used */
 
   --secondary-bg-color: #5d656c; /* used */
@@ -22,7 +22,7 @@
 
   /* Links */
   --link-color: #84888e; /* used */
-  --hover-color: #f9fcfe; /* used */
+  --hover-color: #C8A0BE; /* used */
   --active-color: #f52727; /* used */
 
   /* From styletile */
@@ -52,9 +52,9 @@
   --cta-text-color: #FFFAE2;
   --cta-text-color-inverted: #bbc3ca;
   --followup-text-color: #ffffff;
-  --followup-text-color-inverted: #bbc3ca;
+  --followup-text-color-inverted: #000000;
   --formfield-text-color: #575c61;
-  --form-submit-color: #bbc3ca;
+  --form-submit-color: #F6EAF3;
   --form-submit-color-inverted: #bbc3ca;
 
   /* Background colors */
@@ -63,9 +63,9 @@
   --article-background-color: #DBE2F5;
   --news-background-color: #FFFAE2;
   --news-background-color-inverted: #ffffff;
-  --info-background-color: #DBE2F5;
+  --info-background-color: #B9D9FE;
   --headline-bg-color: #000000;
-  --headline-bg-color-alert: #FD69AE;
+  --headline-bg-color-alert: #FF5C38;
   --headline-bg-color-inverted: #6F90EB;
   --bodytext-bg-color: #dbdde3;
   --bodytext-bg-color-inverted: #dbdde3;
@@ -79,8 +79,16 @@
   --formfield-background-color-active: #dbdde3;
   --form-submit-bg-color: #dbdde3;
   --form-submit-bg-color-inverted: #FFFAE2;
+  --infographic-bg-color: #6F90EB;
+  --dialog-bg-color: #FFDEF7;
+  --hover-bg-color: #FF067A;
+  --img-bg-color: #ffffff;
 
   /* Info-boxes */
-  --info-bg-color-yellow: #FCEB94;
-  --info-bg-color-green: #DEF5DB;
+  --info-bg-color-yellow: #FFFAE2;
+  --info-bg-color-green: #E6DEBF;
+}
+
+#logotype-wrapper{
+  background-color: var(--logotype-background-color);
 }

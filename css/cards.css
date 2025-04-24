@@ -8,15 +8,17 @@
   height: minmax(200px, min-content);
 }
 
-#daily :nth-child(2){
+/* #daily :nth-child(2){
   padding-bottom: 1rem;
-}
+} */
 #daily :nth-child(2) p{
   margin-bottom: 0;
 }
 
 .daily_card img{
   max-width: 100%;
+  background-color: var(--img-bg-color);
+  padding-top: 4rem;
 }
 
 .daily_text {
@@ -57,6 +59,7 @@
 .news_card > * {
   padding: 0 1rem;
 }
+
 .news_card h3 {
   margin: 0.5rem 0 0 0;
   text-align: center;
@@ -78,6 +81,8 @@
 }
 .news_card:first-child {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+/*   margin: 0 0 1rem 0; */
+  text-align: center;
 }
 .news_card:last-child {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
@@ -99,7 +104,7 @@
   width: max-content;
 }
 .cta_btn:hover{
-  background-color: #FF067A;
+  background-color: var(--hover-bg-color);
 }
 .cta_btn:after {
   content: "\2192";
@@ -124,7 +129,7 @@
 #openBtn1:hover,
 #openBtn2:hover,
 #openBtn3:hover{
-  background-color: #FF067A;
+  background-color: var(--hover-bg-color);
 }
 
 #breaking img{
@@ -138,21 +143,55 @@
 dialog{
   border: none;
   border-radius: 1rem;
-  background-color: #DCFFEE;
-  width: 50%;
+  background-color: var(--dialog-bg-color);
+  width: 40%;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
   padding: 2rem;
   margin: minmax(1rem, auto);
 }
+
+dialog article{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+dialog img{
+  grid-column: span 2;
+}
+
 dialog h2{
-  font-size: 30px;
+  font-size: 20px;
+  color: var( --followup-text-color);
+  grid-column: span 2;
+  background-color: var(--header-background-color);
+  padding: 1rem;
+}
+
+#dialog2 h2{
+  text-align: center;
+}
+
+#dialog3 h2{
+  text-align: center;
+}
+
+dialog p {
+  margin-top: 2rem;
+  color:  var(--followup-text-color-inverted);
+  line-break: normal;
+  text-align: left;
+}
+
+dialog button{
+  margin: 2rem;
+  grid-column: span 2;
 }
 dialog::backdrop{
   backdrop-filter: blur(5px);
 }
-dialog form{
-  margin: 2rem;
-}
+
 #closeBtn1,
 #closeBtn2,
 #closeBtn3{
@@ -166,6 +205,12 @@ dialog form{
   text-decoration: none;
   justify-self: center;
   width: max-content;
+}
+
+#closeBtn1:hover,
+#closeBtn2:hover,
+#closeBtn3:hover{
+  background-color: var(--hover-bg-color);
 }
 dialog img{
   margin-top: 1rem;

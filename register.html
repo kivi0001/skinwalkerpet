@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/custom.css" id="lightmode" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/infographic.css" />
@@ -37,6 +37,10 @@
             />
           </a>
         </div>
+        <label class="switch">
+          <input type="checkbox" name="darkBtn" id="darkBtn" />
+          <span class="slider"></span>
+        </label>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Signaler</a></li>
           <li><a class="menuItem" href="register.html">Indhent tilbud</a></li>
@@ -45,8 +49,10 @@
     </header>
 
     <main>
-      <h1 class="instruks">INDHENT TILBUD</h1>
-
+      <div id="tilbud">
+        <img class="logoeye" src="assets/Artboard1.svg" alt="ICON" />
+        <h1 class="register">INDHENT TILBUD</h1>
+      </div>
       <section id="form-section">
         <article id="form-info">
           <h2>BESTIL CLAIRVOYANT MED <br />SPECIALE I DYR</h2>
@@ -222,5 +228,6 @@
       </nav>
     </footer>
     <script src="js/form.js"></script>
+    <script src="js/dark.js"></script>
   </body>
 </html>
