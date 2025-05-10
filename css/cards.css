@@ -4,10 +4,23 @@
   grid-template-columns: 3fr 5fr;
   gap: 10px;
   padding: 10px 0 10px 10px;
-  /* border: 1px solid var(--border-color); */
   border-radius: var(--border-radius);
   height: minmax(200px, min-content);
 }
+
+/* #daily :nth-child(2){
+  padding-bottom: 1rem;
+} */
+#daily :nth-child(2) p{
+  margin-bottom: 0;
+}
+
+.daily_card img{
+  max-width: 100%;
+  background-color: var(--img-bg-color);
+  padding-top: 4rem;
+}
+
 .daily_text {
   display: grid;
   grid-template-rows: repeat(3, min-content);
@@ -46,11 +59,14 @@
 .news_card > * {
   padding: 0 1rem;
 }
+
 .news_card h3 {
   margin: 0.5rem 0 0 0;
+  text-align: center;
 }
 .news_card p {
   margin: 0 0 1rem 0;
+  text-align: center;
 }
 .news_card:first-child:before {
   content: "BREAKING NEWS";
@@ -58,13 +74,15 @@
   color: var(--headline-color-inverted);
   font-family: var(--headline-font);
   font-size: var(--headline3-size);
+  font-weight: bold;
   text-align: center;
-  line-height: 1rem;
   padding: calc(1.1rem / 1.5) 0 calc(1.1rem / 2) 0;
-  /* margin: 0 0 1rem 0; */
+/*   margin: 0 0 1rem 0; */
 }
 .news_card:first-child {
   border-radius: var(--border-radius) var(--border-radius) 0 0;
+/*   margin: 0 0 1rem 0; */
+  text-align: center;
 }
 .news_card:last-child {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
@@ -73,18 +91,142 @@
 .news_card .cta_btn {
   justify-self: center;
 }
+
 .cta_btn {
   display: inline-block;
   padding: 0.3rem 0.5rem;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
+  border: none;
+  border-radius: 15px;
   background-color: var(--followup-text-bg-color);
   color: var(--followup-text-color);
   text-align: center;
   text-decoration: none;
   width: max-content;
 }
+.cta_btn:hover{
+  background-color: var(--hover-bg-color);
+}
 .cta_btn:after {
   content: "\2192";
   margin-left: 0.5rem;
+}
+
+#openBtn1,
+#openBtn2,
+#openBtn3{
+  display: inline-block;
+  padding: 0.3rem 0.5rem;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--followup-text-bg-color);
+  color: var(--followup-text-color);
+  text-align: center;
+  text-decoration: none;
+  width: max-content;
+  justify-self: center;
+}
+
+#openBtn1:hover,
+#openBtn2:hover,
+#openBtn3:hover{
+  background-color: var(--hover-bg-color);
+}
+
+#breaking img{
+  max-width: 80%;
+  max-height: 300px;
+  justify-self: center;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+}
+
+dialog{
+  border: none;
+  border-radius: 1rem;
+  background-color: var(--dialog-bg-color);
+  width: 40%;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  margin: minmax(1rem, auto);
+}
+
+dialog article{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  row-gap: 1em;
+}
+
+dialog img{
+  grid-column: span 2;
+}
+
+dialog h2{
+  font-size: 20px;
+  color: var( --followup-text-color);
+  grid-column: span 2;
+  background-color: var(--header-background-color);
+  padding: 1rem;
+}
+
+#dialog2 h2{
+  text-align: center;
+}
+
+#dialog3 h2{
+  text-align: center;
+}
+
+dialog p {
+  margin-top: 2rem;
+  color:  var(--followup-text-color-inverted);
+  line-break: normal;
+  text-align: left;
+}
+
+dialog button{
+  margin: 2rem;
+  grid-column: span 2;
+}
+dialog::backdrop{
+  backdrop-filter: blur(5px);
+}
+
+#closeBtn1,
+#closeBtn2,
+#closeBtn3{
+  display: inline-block;
+  background-color: var(--followup-text-bg-color);
+  color: var(--followup-text-color);
+  padding: 0.3rem 1rem;
+  border: none;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  justify-self: center;
+  width: max-content;
+}
+
+#closeBtn1:hover,
+#closeBtn2:hover,
+#closeBtn3:hover{
+  background-color: var(--hover-bg-color);
+}
+dialog img{
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0%;
+}
+to{
+opacity: 100%;
+}
+}
+
+#dialog1,
+#dialog2,
+#dialog3{
+  animation: fadeIn 1.5s ease-in;
 }
